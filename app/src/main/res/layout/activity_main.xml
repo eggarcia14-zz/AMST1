@@ -6,13 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.982"
+        app:menu_animationDelayPerItem="55"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="#da3c2f"
+        app:menu_colorPressed="#dc4b3f"
+        app:menu_colorRipple="#99d4d4d4"
+        app:menu_fab_label="Opciones"
+        app:menu_fab_size="normal"
+        app:menu_icon="@android:drawable/ic_dialog_dialer"
+        app:menu_labels_colorNormal="#333"
+        app:menu_labels_colorPressed="#444"
+        app:menu_labels_colorRipple="#66efecec"
+        app:menu_labels_cornerRadius="3dp"
+        app:menu_labels_ellipsize="none"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_margin="0dp"
+        app:menu_labels_maxLines="-1"
+        app:menu_labels_padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="#f2f1f1"
+        app:menu_labels_textSize="15sp"
+        app:menu_openDirection="up"
+        app:menu_shadowColor="#66aff198"
+        app:menu_shadowRadius="4dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="4dp"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menuItemCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Calendario"
+            app:fab_size="mini"
+            android:src="@drawable/calendario" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menuItemMapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Mapa"
+            app:fab_size="mini"
+            android:src="@drawable/mapa" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menuItemVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Video"
+            app:fab_size="mini"
+            android:src="@drawable/youtube" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menuItemGrafico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Gráfico"
+            app:fab_size="mini"
+            android:src="@drawable/bar" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 </android.support.constraint.ConstraintLayout>
