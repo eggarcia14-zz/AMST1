@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         grafico = (FloatingActionButton) findViewById(R.id.menuItemGrafico);
 
         grafico.setOnClickListener(this);
-
+        calendario.setOnClickListener(this);
     }
 
     public void getGrafico(View view) {
@@ -34,10 +34,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    public void getCalendario(View view){
+        Intent intent = new Intent(this, CalendarV.class);
+        startActivity(intent);
+    }
+
     public void onClick(View v) {
-        if(v.getId() == R.id.menuItemGrafico) {
+        if(v.getId() == R.id.menuItemCalendar) {
+            getCalendario(v);
+        }
+        else if(v.getId() == R.id.menuItemGrafico) {
             getGrafico(v);
         }
+
     }
 
 }
